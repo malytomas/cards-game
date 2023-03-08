@@ -9,125 +9,145 @@ body {
 
 .card {
 	width: 60mm;
-	line-height: 1.2;
+	line-height: 1.15;
 }
 
 .card .container {
+	position: relative;
 	width: 54mm;
-	height: 86mm;
-	margin: 2mm auto;
-	padding: 0mm 1mm;
+	height: 82mm;
+	margin: 3mm auto;
+	padding: 0mm;
 	border: 0.2mm solid white;
 	border-radius: 2mm;
 	background-image: url("media/background.jpg");
 	background-repeat: repeat;
 	background-size: 20mm 20mm;
-}
-
-.card.tag-spell .container {
-	background-image: url("media/spell.jpg");
-}
-
-.card.tag-item .container {
-	background-image: url("media/item.jpg");
-}
-
-.card .container div {
-	margin: 0.3mm auto;
-	padding: 1mm;
-	border: 0.3mm solid black;
-	background-color: rgba(250, 235, 215, 0.85);
 	overflow: hidden;
-}
-
-.card div.name {
-	height: 6.5mm;
-	border-radius: 5mm;
-	font-family: "Brush Script MT", cursive;
-	font-size: 4.5mm;
-	text-align: center;
-}
-
-.card.tag-artifact .tags {
-	background-color: rgba(250, 250, 250, 0.85);
 }
 
 .card div.picture {
-	height: 29mm;
-	padding: 0mm;
-	border-radius: 4mm;
-	background-color: rgba(0, 0, 0, 0.15);
-	overflow: hidden;
+	width: 54mm;
+	height: 54mm;
 }
 
 .card div.picture img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	border-radius: 2mm;
 }
 
-.card div.tags {
-	border-radius: 2mm;
-	font-family: Georgia, serif;
-	font-size: 3.5mm;
-	text-align: right;
+.card div.name {
+	position: absolute;
+	top: 2mm;
+	right: 4mm;
+	padding: 1mm 4mm;
+	border: 0.2mm solid gray;
+	border-radius: 1mm;
+	background-color: rgba(250, 235, 215, 0.85);
+	font-family: "Brush Script MT", cursive;
+	font-size: 3mm;
+	text-align: center;
+}
+
+.card div.name::before, .card div.name::after {
+	content: "";
+	position: absolute;
+	width: 2.45mm;
+	top: 0.2mm;
+	bottom: 0.2mm;
+	border-radius: 0.5mm;
+	background: url("media/gem.png") no-repeat;
+	background-size: 5mm 5mm;
+	opacity: 0.6;
+}
+
+.card div.name::before {
+	left: 0mm;
+	background-position: right;
+}
+
+.card div.name::after {
+	right: 0mm;
+	background-position: left;
 }
 
 .card div.stats {
-	border-radius: 2mm;
+	position: absolute;
+	left: 2.5mm;
+	bottom: 28.5mm;
+	padding: 0.2mm 1.5mm;
+	border: 0.2mm solid gray;
+	border-radius: 1mm;
+	background-color: rgba(250, 235, 215, 0.85);
 	font-family: Garamond, serif;
-	font-size: 4.5mm;
+	font-size: 3mm;
 	text-align: center;
 }
 
 .card div.description {
-	height: 26.5mm;
-	border-radius: 3mm;
+	position: absolute;
+	left: 0.5mm;
+	right: 0.5mm;
+	top: 54.3mm;
+	bottom: 3.75mm;
+	padding: 0.5mm 1mm;
+	border: 0.2mm solid gray;
+	border-radius: 2mm;
+	background-color: rgba(250, 235, 215, 0.85);
 	font-family: Arial, sans-serif;
-	font-size: 3.5mm;
+	font-size: 2.5mm;
 }
 
 .card .description br {
 	content: "";
 	display: block;
-	margin-bottom: 1mm;
+	margin-bottom: 0.4mm;
 }
 
 .card .description q {
 	font-style: italic;
 }
 
-.card .stats img {
-	margin: 0mm 1mm;
-}
-
-.card .description img {
-	margin: 0mm;
+.card div.tags {
+	position: absolute;
+	left: 10mm;
+	right: 10mm;
+	bottom: -0.1mm;
+	padding: 0.15mm 2mm;
+	border: 0.2mm solid gray;
+	border-top-left-radius: 1mm;
+	border-top-right-radius: 1mm;
+	background-color: rgba(250, 235, 215, 0.85);
+	font-family: Georgia, serif;
+	font-size: 2.5mm;
+	text-align: center;
 }
 
 .card .stats img, .card .description img {
-	height: 3.5mm;
-	margin-top: -1mm;
+	height: 2.5mm;
+	margin-left: 0.5mm;
+	margin-right: 0.4mm;
+	margin-top: -0.7mm;
 }
 
-.card div.footer {
-	margin: -0.45mm auto;
-	padding: 0mm 5mm;
-	border: 0;
-	background-color: rgba(0, 0, 0, 0);
-	font-family: Arial, sans-serif;
-	font-size: 1.5mm;
+.card.tag-item .container {
+	background-image: url("media/background-item.jpg");
 }
 
-.card .footer span {
-	padding: 0.2mm;
-	background-color: rgba(255, 255, 255, 0.2);
+.card.tag-spell .container {
+	background-image: url("media/background-spell.jpg");
 }
 
-.card span.edition {
-	float: left;
+.card.tag-item div.name::before, .card.tag-item div.name::after {
+	background-image: url("media/gem-item.png");
 }
 
-.card span.url {
-	float: right;
+.card.tag-spell div.name::before, .card.tag-spell div.name::after {
+	background-image: url("media/gem-spell.png");
+}
+
+.card.tag-artifact .tags {
+	background-color: rgba(250, 250, 250, 0.85);
 }

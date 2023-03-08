@@ -23,7 +23,7 @@ function makeStats(d) {
 		arr.push(d.Military + "<img src=\"media/military.png\">")
 	if (d.Faith.length > 0)
 		arr.push(d.Faith + "<img src=\"media/faith.png\">")
-	return "&nbsp;" + arr.join(" &nbsp; ") + "&nbsp;"
+	return "&nbsp;" + arr.join("&nbsp;&nbsp;") + "&nbsp;"
 }
 
 function makeDescription(d) {
@@ -44,57 +44,43 @@ function makeDescription(d) {
 function findCard(data, id) {
 	for (let d of data) {
 		if (d.id == id)
-			return [d];
+			return d;
 	}
 }
 
 function updateCards(data) {
 	d3.selectAll(".card").each(function() {
 		let sel = d3.select(this);
-		sel.data(findCard(data, sel.attr("data-card-id")));
+		let d = findCard(data, sel.attr("data-card-id"));
+		sel.data([d]);
 		sel.attr("class", makeClasses);
 		let cont = 	sel.append("div").classed("container", true);
 
-		cont
-			.append("div")
-			.classed("name", true)
-			.text(d => d.Name)
-
-		cont
-			.append("div")
+		cont.append("div")
 			.classed("picture", true)
 			.append("img")
 			.attr("src", makeImgSrc)
-			.attr("alt", makeImgSrc)
+			.attr("alt", makeImgSrc);
 
-		cont
-			.append("div")
-			.classed("tags", true)
-			.html(makeTags)
+		cont.append("div")
+			.classed("name", true)
+			.text(d => d.Name);
 
-		cont
-			.append("div")
-			.classed("stats", true)
-			.html(makeStats)
+		let stats = makeStats(d);
+		if (stats.indexOf("img") > 0)
+		{
+			cont.append("div")
+				.classed("stats", true)
+				.html(stats);
+		}
 
-		cont
-			.append("div")
+		cont.append("div")
 			.classed("description", true)
-			.html(makeDescription)
+			.html(makeDescription);
 
-		let footer = cont
-			.append("div")
-			.classed("footer", true)
-
-		footer.
-			append("span")
-			.classed("edition", true)
-			.text("1")
-
-		footer.
-			append("span")
-			.classed("url", true)
-			.text("https://garage-trip.cz/cards")
+		cont.append("div")
+			.classed("tags", true)
+			.html(makeTags);
 	});
 }
 
