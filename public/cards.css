@@ -1,0 +1,40 @@
+
+@media screen {
+	#statistics {
+		color: white;
+	}
+
+	#cards {
+		line-height: 0px;
+	}
+
+	.card {
+		display: inline-block;
+		border: 1px dashed gray;
+	}
+}
+
+@media print {
+	@page {
+		size: 60mm 90mm;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+	}
+
+	body, html {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#statistics {
+		display: none;
+	}
+
+	.card {
+		page-break-before: never;
+		page-break-inside: never;
+		page-break-after: always;
+		margin-top: 0.01mm;
+	}
+}

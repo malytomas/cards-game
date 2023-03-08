@@ -1,0 +1,133 @@
+
+* {
+	vertical-align: middle
+}
+
+body {
+	background-color: rgb(17, 17, 17);
+}
+
+.card {
+	width: 60mm;
+	line-height: 1.2;
+}
+
+.card .container {
+	width: 54mm;
+	height: 86mm;
+	margin: 2mm auto;
+	padding: 0mm 1mm;
+	border: 0.2mm solid white;
+	border-radius: 2mm;
+	background-image: url("media/background.jpg");
+	background-repeat: repeat;
+	background-size: 20mm 20mm;
+}
+
+.card.tag-spell .container {
+	background-image: url("media/spell.jpg");
+}
+
+.card.tag-item .container {
+	background-image: url("media/item.jpg");
+}
+
+.card .container div {
+	margin: 0.3mm auto;
+	padding: 1mm;
+	border: 0.3mm solid black;
+	background-color: rgba(250, 235, 215, 0.85);
+	overflow: hidden;
+}
+
+.card div.name {
+	height: 6.5mm;
+	border-radius: 5mm;
+	font-family: "Brush Script MT", cursive;
+	font-size: 4.5mm;
+	text-align: center;
+}
+
+.card.tag-artifact .tags {
+	background-color: rgba(250, 250, 250, 0.85);
+}
+
+.card div.picture {
+	height: 29mm;
+	padding: 0mm;
+	border-radius: 4mm;
+	background-color: rgba(0, 0, 0, 0.15);
+	overflow: hidden;
+}
+
+.card div.picture img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card div.tags {
+	border-radius: 2mm;
+	font-family: Georgia, serif;
+	font-size: 3.5mm;
+	text-align: right;
+}
+
+.card div.stats {
+	border-radius: 2mm;
+	font-family: Garamond, serif;
+	font-size: 4.5mm;
+	text-align: center;
+}
+
+.card div.description {
+	height: 26.5mm;
+	border-radius: 3mm;
+	font-family: Arial, sans-serif;
+	font-size: 3.5mm;
+}
+
+.card .description br {
+	content: "";
+	display: block;
+	margin-bottom: 1mm;
+}
+
+.card .description q {
+	font-style: italic;
+}
+
+.card .stats img {
+	margin: 0mm 1mm;
+}
+
+.card .description img {
+	margin: 0mm;
+}
+
+.card .stats img, .card .description img {
+	height: 3.5mm;
+	margin-top: -1mm;
+}
+
+.card div.footer {
+	margin: -0.45mm auto;
+	padding: 0mm 5mm;
+	border: 0;
+	background-color: rgba(0, 0, 0, 0);
+	font-family: Arial, sans-serif;
+	font-size: 1.5mm;
+}
+
+.card .footer span {
+	padding: 0.2mm;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card span.edition {
+	float: left;
+}
+
+.card span.url {
+	float: right;
+}
