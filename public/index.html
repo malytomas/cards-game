@@ -12,10 +12,91 @@
 <body>
 
 <h1>Card Game - Rules</h1>
+<img src="media/culture.png" alt="culture">
+<img src="media/military.png" alt="military">
+<img src="media/faith.png" alt="faith">
 
-<div class="card" data-card-id="dragon"></div>
-<div class="card" data-card-id="ent"></div>
-<div class="card" data-card-id="counterspell"></div>
+<h2>Collecting And Trading Cards</h2>
+<p>You get 6 cards at the beginning.
+<p>Additional cards will be hidden on some trips for you to discover.
+<p>You may also obtain some additional cards for winning some contests.
+<p>You may trade cards with other players.
+<p>In the spirit of fair game, do not give/take cards to/from others for free.
+
+<h2>Duels</h2>
+<p>You may challenge others to play a duel with you. Such duels are not mandatory and players may freely reject. If they accept, the duel is irrevocable.
+<p>Oftentimes, duels are played for some bets. It is common that each player bets one of their cards.
+
+<h3>Turns</h3>
+<p>The duel is played in turns - one card at a time.
+<p>Players cannot place more than 6 cards (creatures + buildings) on their table.
+<p>Each creature may have at most one item.
+<p>Each player may play at most one spell, and have at most one artifact.
+<p>Effects like “remove one enemy building” are applied immediately.
+<p>Removed cards are put aside and cannot be used again, unless explicitly stated.
+<p>When no player wants to, or cannot, play any more cards, the turns are over.
+
+<h3>Evaluation</h3>
+<p>Execute At the end rules.
+<p>All non-final additive, multiplicative, and conversion effects are applied, in this order.
+<p>Stats from the cards are summed for each player.
+<p>Final effects are applied; additive, multiplicate, and conversions, in this order.
+<p>If all cards on the player's table are of the same race, the player gets a bonus +10 to Culture.
+<p>If a player has negative Faith, multiply it by -1.
+<p>Decide winner (first applicable rule decides):
+<p>If one player has more than a 50 lead in one category (C/M/F) that player wins (unless the other player has over a 50 lead in another category).
+<p>The player who leads (by any amount) in more categories (C/M/F) wins.
+<p>The player with the highest sum (C+M+F) wins.
+
+<h3>Example Duel</h3>
+<img src="media/rules-example.png" alt="rules-example">
+
+<p>Turns:
+<p>1st turn: the bottom player starts with Craftsman.
+<p>…
+<p>6th turn: the top player plays the Wisp and targets the second Craftsman.
+<p>7th turn: the bottom player plays illusion and targets the Workshop.
+<p>8th turn: the top player plays Book of Laments targeting the Wisp.
+<p>After eight turns, no player has any more cards and the game stops.
+<p>Evaluation:
+<p>The first Craftsman has 7 culture, due to the Workshops.
+<p>The second has 4, thanks to the two Workshops and the Wisp.
+<p>The illusion of the workshop has 3/1/1 - it is an illusion.
+<p>The bottom player gets bonus 10 culture because all their cards are of one race.
+<p>In total, the bottom player has 29/2/2.
+<p>Orcs each have 6 military.
+<p>The wisp has 9/0/2 thanks to the Book of Laments.
+<p>The top player has 9/12/2 in total.
+<p>No player has a lead of more than 50.
+<p>Each player has a lead in 1 category.
+<p>The bottom player wins as they have a higher sum.
+
+<h3>Miscellaneous</h3>
+<p>Stat or stats means one of Culture, Military, and Faith (C/M/F).
+<p>Cards on table means played creatures and buildings.
+<p>Played item/spell cards are placed over the creature they apply to.
+<p>You can give items to your own creatures only.
+<p>Giving an item to a creature that cannot have more items replaces one of the previous items.
+<p>Removing a creature with an item removes the item too.
+<p>Some limits (cards on table, number of spells, number of items) can be extended by other cards. Limit for artifacts is never extended.
+<p>If your artifact is removed, you may play another one.
+<p>Rules that do not specify enemy cards means own cards only.
+<p>Rules that do not mention removed cards means cards on table.
+<p>Played spells are not removed, but they cannot be played again.
+<p>Halving (or any divisions) rounds away from zero.
+<p>Strongest stat is the one with the highest absolute value. Take the first one in order (C/M/F) in case multiple of them have the same absolute value.
+<p>Races are: human, orc, elf, dwarf, divine, demonic, and undead.
+<p>To get bonus Culture: you must have at least one creature or building with a race, and cards without any race are ignored.
+<p>Quoted texts on the cards are lore only and do not make rules.
+<p>Cards added as an effect of other cards, such as Raise Undead or Graveyard, cannot be directly targeted by other cards, such as Dragon or Doppelganger. However, the card is still affected by effects such as “All creatures get +1 to Faith”.
+<p>Cards added “at the end” do apply numerical effects, but their effects like “remove enemy creature” are ignored.
+<p>Copied cards (Eg. Illusion) ignore items and other effects. But numerical effects like “+1 for each card” are applied.
+<p>If the order of evaluating cards is ambiguous, evaluate them in the order in which they were played.
+
+<h3>Fixes</h3>
+<p>Break can be used on own or enemy items.
+<p>Embers negative effect applies to enemy creatures.
+<p>Tomb uses building cards instead of non-creature cards only.
 
 </body>
 </html>
