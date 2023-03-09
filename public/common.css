@@ -86,7 +86,7 @@ body {
 	text-align: center;
 }
 
-.card div.description {
+.card div.box {
 	position: absolute;
 	left: 0.5mm;
 	right: 0.5mm;
@@ -97,17 +97,25 @@ body {
 	border-radius: 2mm;
 	background-color: rgba(250, 235, 215, 0.85);
 	font-family: Arial, sans-serif;
-	font-size: 2.5mm;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: stretch;
 }
 
-.card .description br {
+.card div.box br {
 	content: "";
 	display: block;
 	margin-bottom: 0.4mm;
 }
 
-.card .description q {
+.card div.description {
+	font-size: 2.5mm;
+}
+
+.card div.lore {
 	font-style: italic;
+	font-size: 2.3mm;
 }
 
 .card div.tags {
@@ -128,7 +136,7 @@ body {
 .card .stats img, .card .description img {
 	height: 2.5mm;
 	margin-left: 0.5mm;
-	margin-right: 0.4mm;
+	margin-right: 0.2mm;
 	margin-top: -0.7mm;
 }
 

@@ -31,14 +31,20 @@ function makeDescription(d) {
 	for (let a of d.Description.split(";")) {
 		arr.push(a.trim()
 			.replace(/^'/, "")
-			.replace("\"", "<q>")
-			.replace("\"", "</q>")
 			.replace(/\\C/g, "<img src=\"media/culture.png\">")
 			.replace(/\\M/g, "<img src=\"media/military.png\">")
 			.replace(/\\F/g, "<img src=\"media/faith.png\">")
-		)
+		);
 	}
-	return arr.join("<br>")
+	return arr.join("<br>");
+}
+
+function makeLore(d) {
+	let arr = []
+	for (let a of d.Lore.split(";")) {
+		arr.push(a.trim());
+	}
+	return arr.join("<br>");
 }
 
 function findCard(data, id) {
@@ -54,7 +60,7 @@ function updateCards(data) {
 		let d = findCard(data, sel.attr("data-card-id"));
 		sel.data([d]);
 		sel.attr("class", makeClasses);
-		let cont = 	sel.append("div").classed("container", true);
+		let cont = sel.append("div").classed("container", true);
 
 		cont.append("div")
 			.classed("picture", true)
@@ -74,9 +80,17 @@ function updateCards(data) {
 				.html(stats);
 		}
 
-		cont.append("div")
-			.classed("description", true)
-			.html(makeDescription);
+		let box = cont.append("div").classed("box", true);
+		if (d.Description.length > 0) {
+			box.append("div")
+				.classed("description", true)
+				.html(makeDescription);
+		}
+		if (d.Lore.length > 0) {
+			box.append("div")
+				.classed("lore", true)
+				.html(makeLore);
+		}
 
 		cont.append("div")
 			.classed("tags", true)
