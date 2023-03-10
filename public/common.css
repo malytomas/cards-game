@@ -29,6 +29,9 @@ body {
 .card div.picture {
 	width: 54mm;
 	height: 54mm;
+	line-height: 50mm;
+	text-align: center;
+	color: white;
 }
 
 .card div.picture img {
@@ -71,6 +74,19 @@ body {
 .card div.name::after {
 	right: 0mm;
 	background-position: left;
+}
+
+.card div.costs {
+	position: absolute;
+	left: 0.8mm;
+	top: 1.5mm;
+	padding: 1.3mm 1mm;
+	border: 0.2mm solid gray;
+	border-radius: 2.8mm;
+	background-color: rgba(250, 235, 215, 0.85);
+	font-family: Garamond, serif;
+	font-size: 3mm;
+	text-align: center;
 }
 
 .card div.stats {
@@ -133,11 +149,23 @@ body {
 	text-align: center;
 }
 
-.card .stats img, .card .description img {
+.card div.separator {
+	position: absolute;
+	top: 51.5mm;
+	height: 6mm;
+	left: 2mm;
+	right: 2mm;
+}
+
+.card div.separator img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card .costs img, .card .stats img, .card .description img {
 	height: 2.5mm;
-	margin-left: 0.5mm;
-	margin-right: 0.2mm;
-	margin-top: -0.7mm;
+	margin-top: -0.6mm;
 }
 
 .card.tag-item .container {
@@ -156,6 +184,6 @@ body {
 	background-image: url("media/gem-spell.png");
 }
 
-.card.tag-artifact .tags {
+.card.tag-artifact .tags, .card.tag-artifact .name {
 	background-color: rgba(250, 250, 250, 0.85);
 }

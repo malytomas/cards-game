@@ -1,85 +1,106 @@
-Count,Name,Race,Tags,Culture,Military,Faith,Description,Lore
-4,Peasant,human,creature,4,1,2,,"Ready for work!; ...; Work, again?"
-4,Craftsman,human,creature,5,,,+1\C for each Workshop,I'm being repressed!
-3,Priest,human,creature,,,4,+2\F for each Temple,"One ring to rule them all, one ring to find them. One ring to bring them all, ...; Sorry, wrong book."
-3,Ranger,human,creature,,2,2,+1\M for each Castle; +1\F for each Temple,You have my sword.
-3,Knight,human,creature,2,2,,"+2\M for each Castle","Damn helmet, can't seem to get this thing..."
-3,Wizard,human,creature,,4,,You can play additional spell,You shall not pass!
-3,Monk,human,creature,,,4,"Target one enemy non-artifact creature, which becomes yours; You must have sufficient cards limit",Wololo.
-1,The Thief,human,"creature, artifact",2,,,Won: permanently take one random played non-artifact card from the opponent; Lost: permanently give The Thief to the oponent,
-1,The King,human,"creature, artifact",,3,,At the end: pick two of \C/\M/\F; Exchange the two final values,"The king commands, the nation obeys."
-3,Workshop,human,building,5,1,1,,"Look, I'm an engineer, my time is valuable."
-3,Temple,human,building,2,,5,,In nomine Patris et Filii et Spiritus sancti.
-3,Castle,human,building,2,5,,,"Draw bridge, machicolations, murder holes, hoardings, arrowslits, bartizans, embrasures, merlons, ..."
-3,Trebuchet,human,building,,5,,Removes one enemy building,I'm TNT! I'm dynamite!
-6,Orc,orc,creature,,5,,+1\M for each Orc,"The more orc you have, the more orc you get."
-6,Goblin,orc,creature,,5,,+1\M for each Goblin,"Judge me by my size, do you?"
-3,Troglodyte,orc,creature,,7,,,"Twolobite, ... trilobite, ... troglodyte!"
-3,Dragon,orc,creature,,5,,Removes one enemy creature,"Look, I made an obsidian."
-3,Minotaur,orc,creature,,5,,+5\M if you have Maze,I am not a cyclop. I have two eyes.
-1,The Maze,orc,"building, artifact",5,,,"+4\C for each enemy creature, if you have Minotaur",There is great treasue at the end. There is great minotaur in the way.
-3,Centaur,elf,creature,3,4,,,"How do you wear pants?; I dont."
-3,Druid,elf,creature,7,,,,"One tree, two trees, tree threes, ... three trees, ... I have to stop playing the dies, ... the dices ..."
-4,Ent,elf,creature,1,3,,+1\C +2\M for each Entwife,"You see, we lost the entwives."
-4,Entwife,elf,creature,3,1,,+2\C +1\M for each Ent,"I am right here, you dumb***."
-3,Wisp,elf,creature,4,,,Posesses one enemy human/orc/dwarf creature; Possesed creature has their stats halved,"Eo, eo, eo."
-3,Sacred Grove,elf,building,,,,+3\C for each enemy creature with non-zero \M,Greatest civilizations are grown from the ashes of their foes.
-4,Miner,dwarf,creature,4,,,+2\C for each Blacksmith,The spirits of the earth guide me.; You mean metal ores.; Of course.
-4,Axedwarf,dwarf,creature,,4,,+2\M for each Blacksmith,I’m wasted on cross-country. We Dwarves are natural sprinters. Very dangerous over short distances.
-3,Blacksmith,dwarf,building,5,,,,Tailor for the wealthy.; ...; I mean... for the dwarfs.; For wealthy dwarfs.
-3,Bank,dwarf,building,7,,,,Gems and money is what makes a dwarf happy.
-3,Dwarf Fortress,dwarf,building,,7,,,Booze does all the work in forts.; Dwarves are just booze exoskeletons.
-4,Oracle,divine,creature,,2,5,,You've already made the choice. You're here to understand why you've made it.
-3,Angel,divine,creature,3,-5,7,All own and enemy creatures have +1\F,I saw the angel in the marble and carved until I set her free.
-5,Griffin,divine,creature,2,2,2,Immune to all negative effects,"Stand straight, walk proud, have a little faith."
-4,Faerie,divine,creature,6,-3,3,"Immune to all spels, own and enemy",The fairest of them all.
-3,Titan,divine,creature,,4,1,Removes one enemy creature,"In the name of god, we fight."
-1,The God,divine,"creature, artifact",,,,Your final \F is doubled; Your final \M and \C become zero,The faith is absolute.
-5,Imp,demonic,creature,,2,-4,-1\F for each Sacrificial Shrine,Caring for the fires is my pleasure.
-5,Harpy,demonic,creature,,5,-2,,I smell magic in the air.; Or maybe barbecue.
-3,Succubus,demonic,creature,,2,-2,Posesses one enemy human/orc/dwarf creature; Possesed creature has their stats halved,Pleasure beyond life.
-3,Cerberus,demonic,creature,,4,,First 3 enemy creatures have -2\M,"Left head: 'This way!'; Right head: 'No, that way!'"
-1,The Balrog,demonic,"creature, artifact",,13,-8,You have to remove one own creature; The Balrog takes two from the cards limit,
-3,Sacrificial Shrine,demonic,building,3,,-4,,The fires are bright and full of screams.
-4,Skeleton,undead,creature,-1,3,-1,+2\M for each Graveyard,"No guts, no gory."
-4,Zombie,undead,creature,-1,4,-1,+2\M for each Tomb,Humans check in. They don't check out.
-3,Vampire,undead,creature,-1,5,-1,+2\M for each enemy non-undead creature,I'm having a mid-death crisis.
-3,Lich,undead,creature,-1,3,-2,All undead creatures have +1\M -1\F,I always wanted to start my own religion... so I did!
-3,Ghost,undead,creature,-1,5,-1,All enemy non-undead creatures have -1\M,"I'm invisible, gaseous, and deadly."
-3,Spectre,undead,creature,?,?,?,"At the end: spectre's stats are replicated from another creature on the table, own or enemy, ignoring any effects on the target",
-1,The Plague Rats,undead,"creature, artifact",,3,,All enemy non-undead creatures have half their \M converted to \F,"You may pray, but without breath you cannot fight."
-3,Graveyard,undead,building,2,,,"At the end: add Skeleton for each remaining removed non-undead creature, own or enemy; These Skeletons bypass cards limit",
-3,Tomb,undead,building,2,,,"At the end: add Zombie for each remaining removed non-undead building, own or enemy; These Zombies bypass cards limit",
-4,Holy Water,,item,,,2,+5\M if enemy has any undead,Tastes like tap water.
-4,Mandolin,,item,5,,,+2\C if you have Book of Poems,𝄠𝄰𝆔𝅘𝅥𝅮𝅗𝅗𝆕𝄗 𝄽𝄅𝇓𝅘𝅥𝅯𝅘𝅥𝅮𝄬𝅘𝅥𝅱𝄬𝆕𝅗𝅯𝆪𝅘𝅥𝅮 𝄆𝅘𝅥𝅮𝅝𝄽𝅘𝅥𝅮𝅘𝅥𝅯𝅗𝅘𝅥𝅯 𝆕𝄬𝄬𝆺𝅥𝅮𝇓𝅘𝅥𝅮𝅘𝅥𝅯𝅘𝅥𝅯𝄇 𝆔𝅝𝅗𝄽𝅗𝅘𝅥𝅮𝅗𝅝𝅝
-3,Book of Poems,,item,3,,2,,Time doesn’t heal wounds to make you forget.; Time leaves you with a scar to remind you of how you bled.
-3,Book of Laments,,item,,,2,+5\C if held by an elf,"Massë ná romba i súyanë? Avániër vë mistë orossë, vë súlimë lairenna. Var cenuva yéni sirala et Ëarello entula?"
-3,Tome of Knowledge,,item,,,,+4 to the strongest stat,"Knowledge, in the right hands, is the most powerful of all things."
-3,Incantation Scroll,,item,,,-5,You can play additional spell,"Malla, Eer, Dul, Aman, Shala, Ros, Ackra, Sheer, Thalla, Salthrak, Imar, Kalador, An’perath, O’sakana, Ferik, ..."
-3,Cloak of Invisibility,,item,,,,The creature is protected from all enemy effects,Definitely not used for peeping.
-4,Poison,,item,-1,5,,,The coward's weapon.
-4,Jewel,,item,5,,,"Requires human, elf, or dwarf","Antique ruby pendant with perfect diamond cut, flawless clarity and deep red color, 3 carats."
-4,Mushrooms,,item,,,,Convert half of \M to \F,"Have you seen the dragon?; No, but I got touched by the god."
-4,Hookah,,item,,,,Convert half of \F to \C,Eternal Smoke Dark Bean; Social Smoke Berry Punch; Starbuzz Blue Mist
-2,Duck,,item,4,,,"The player who loses must quack, 3 times, loud and clear",What does the duck say?
-1,The Yoghurt,,"item, artifact",12,,,,The only culture America makes.
-1,The Sword of Cruelty,,"item, artifact",-5,13,-5,,"Sharp blade, blunt mind."
-1,The Cutest Pet,,"item, creature, artifact",10,,,,Only the most evil person would give it as a gift to another creature instead of freeing it.
-5,Counterspell,,spell,,,,Must be played immediately after the enemy has played a spell; That enemy's spell is cancelled; Cannot use on Counterspell,
-3,Lightning Bolt,,spell,,,,Removes one enemy non-divine creature,Death as fast as light.
-3,Unholly Smite,,spell,,,,Removes one enemy non-demonic creature,"It promises great power, but it exacts a terrible price."
-2,Raise Undead,,spell,,,,"You need Graveyard or Tomb to play this spell;Take one removed non-undead creature, own or enemy, and put it at your table as a Ghost; This Ghost bypasses cards limit",
-2,Upside Down,,spell,,,,"Target one creature, own or enemy; Its stats are multiplied by -1",Alternate dimension that mirrors our world.
-3,Blessing,,spell,,,,"Target one non-divine, non-demonic, non-undead creature, own or enemy; Its strongest stat is doubled",
-3,Curse,,spell,,,,"Target one non-divine, non-demonic, non-undead creature, own or enemy; Its strongest stat becomes zero",Death is the only way to lift the curse.
-2,Doppelganger,,spell,,,,"Target one creature; At the end: creates additional copy of that creature, with halved stats; The copied creature bypasses cards limit",
-2,Illusion,,spell,,,,"Target one building; At the end: creates additional copy of that building, with halved stats; The copied building bypasses cards limit",
-2,Swap Positions,,spell,,,,"Target one enemy non-artifact creature and one own creature; The two creatures are swapped, including equipped items and spells applied directly to them",
-2,High Ground,,spell,,,,Target one creature; Its \M is doubled,"It is over, I have the high ground."
-2,Low Ground,,spell,,,,Target one enemy creature; Its \M is halved,You underestimate my power.
-2,Time Slip,,spell,,,,"Your oponent playes 3 turns in a row, then you play 3 turns in a row, then the game ends; Cannot play if Time Slip is already in effect",
-2,Embers,,spell,,,,+1\M to all demonic creatures; -1\M to all elf enemy creatures,"Made in the hell, burns forever."
-3,Break,,spell,,,,"Removes one item, own or enemy",Your staff is broken.
-1,The Alembic Laboratory,,"building, artifact",2,,,"Convert all final \C to \M, at half rate",Department of Gears and Tie Rods. ... Department of Bubling Solutions.
-1,The Conquerors Library,,"building, artifact",,2,,"Convert all final \M to \C, at half rate",Embrace your curiosity and nothing is impossible.
-1,The House of Mirrors,,"building, artifact",2,,,Your Doppelganger and Illusion create two copies of the target instead of one,Each reflection more beautiful than the previous.
+Count,Name,Race,Tags,Cost,Military,Culture,Faith,Description,Lore
+1,Sacrificial Shrine,demonic,building,,,,,,The fires are bright and full of screams.
+1,Cerberus,demonic,creature,,,,,,
+1,Harpy,demonic,creature,,,,,,I smell magic in the air.; Or maybe barbecue.
+1,Hellhound,demonic,creature,,,,,,
+1,Imp,demonic,creature,,,,,Produces $F every turn,Caring for the fires is my pleasure.
+1,Succubus,demonic,creature,,,,,,Pleasure beyond life.
+1,The Balrog,demonic,"creature, artifact",,,,,+1 \M for every $F you own; Produces $F every turn,
+1,Embers,demonic,item,1 $F,,,,Produces $F every turn,"Made in the hell, burns forever."
+1,Incantation Scroll,demonic,item,,,,,,"Malla, Eer, Dul, Aman, Shala, Ros, Ackra, Sheer, Thalla, Salthrak, Imar, Kalador, An’perath, O’sakana, Ferik, ..."
+1,Break,demonic,spell,1 $M,,,,Remove enemy item,Your staff is broken.
+1,Burn,demonic,spell,1 $F,,,,Remove 4 enemy non-fire resource tokens,
+1,Curse,demonic,spell,,,,,,Death is the only way to lift the curse.
+1,Transfiguration,demonic,spell,1 $M,,,,Rearrange resource tokens between all your cards that can store them; Changing type of tokens is allowed,Turning water into wine is faith.; Turning copper into gold is alchemy.
+1,Unholly Smite,demonic,spell,1 $M,,,,Sacrifice (kill) own demonic creature; Kill enemy creature with positive faith,"It promises great power, but it exacts a terrible price."
+1,Upside Down,demonic,spell,,,,,,Alternate dimension that mirrors our world.
+2,Demonic Race,demonic,vote,,,,,,
+1,Angel,divine,creature,,,,,Grants +1 \F to all divine creatures,I saw the angel in the marble and carved until I set her free.
+1,Griffin,divine,creature,,2,2,2,,"Stand straight, walk proud, have a little faith."
+1,Oracle,divine,creature,,,,,Produces $M every turn,You've already made the choice. You're here to understand why you've made it.
+1,Phoenix,divine,creature,,,,,Once per turn: resurrect if dead; Adds 2 $F tokens when resurrected,
+1,Titan,divine,creature,,,,,+1 \M for each divine creature,"In the name of god, we fight."
+1,Unicorn,divine,creature,,,,,Produces $M every turn,
+1,Wizard,divine,creature,,,,,All spells cost 1 $M less - this effect does not stack,You shall not pass!
+1,The God,divine,"creature, artifact",,,,,Final: convert all \M and \C to \F at half rate,The faith is absolute.
+1,Holy Water,divine,item,1 $G,,,2,+2 \M if enemy has any undead creature,Tastes like tap water.
+1,Blessing,divine,spell,,,,,,
+1,Counterspell,divine,spell,1 $M,,,,Play immediately after enemy spell to cancel it; Cannot cancel Counterspell,
+1,Lightning Bolt,divine,spell,3 $M,,,,Kill one enemy creature,Death as fast as light.
+1,Resurrect,divine,spell,2 $M,,,,Resurrect one own dead non-undead non-demonic creature,
+1,Time Slip,divine,spell,3 $M,,,,Play one additional turn now,
+2,Divine Race,divine,vote,,,,,,
+1,Dwarf Fortress,dwarf,building,,,,,+1 \M for each dwarf creature when defending,Booze does all the work in forts.; Dwarves are just booze exoskeletons.
+1,Vault,dwarf,building,,,,,,Gems and money is what makes a dwarf happy.
+1,Axedwarf,dwarf,creature,,,,,,I’m wasted on cross-country. We Dwarves are natural sprinters. Very dangerous over short distances.
+1,Blacksmith,dwarf,creature,,,,,,Tailor for the wealthy.; ...; I mean... for the dwarfs.; For wealthy dwarfs.
+1,Miner,dwarf,creature,,,,,Produces $G every turn,The spirits of the earth guide me.; You mean metal ores.; Of course.
+1,Runesmith,dwarf,creature,,,,,,
+1,Talos Automaton,dwarf,"creature, building",,,,,+5 \M when defending,Talos is the Sun.
+1,Axe,dwarf,item,1 $G,3,,,"The Axe is free if you have Workshop, Craftsman, or Blacksmith",
+1,Booze,dwarf,item,1 $G,-1,2,,"+1 \M, +2 \C if held by dwarf or human",
+1,Jewel,dwarf,item,1 $G,,3,,The Jevel is free if you have Vault,"Antique ruby pendant with perfect diamond cut, flawless clarity and deep red color, 3 carats."
+1,Leprechaun Pendant,dwarf,item,1 $G,1,1,1,Grants you luck - this has no effect in the game,Humans believe in luck and in circumstances.; Dwarves believe in cause and effect.
+1,Mithril,dwarf,item,1 $G,2,,,+3 \M when defending,
+2,Dwarf Race,dwarf,vote,,,,,,The Dwarves delved too greedily and too deep.
+1,Sacred Grove,elf,building,,,,,,Greatest civilizations are grown from the ashes of their foes.
+1,Centaur,elf,creature,,,,,,How do you wear pants?; I dont.
+1,Druid,elf,creature,,,,,,"One tree, two trees, tree threes, ... three trees, ... I have to stop playing the dies, ... the dices ..."
+1,Dryad,elf,creature,,,,,,
+1,Ent,elf,creature,,,,,+1 \M for each Entwife,"You see, we lost the entwives."
+1,Entwife,elf,creature,,,,,+1 \C for each Ent,"I am right here, you dumb***."
+1,Faerie,elf,creature,,,,,,The fairest of them all.
+1,Wisp,elf,creature,,,,,Produces $M every turn,"Eo, eo, eo."
+1,Book of Laments,elf,item,,,3,,,"Massë ná romba i súyanë? Avániër vë mistë orossë, vë súlimë lairenna. Var cenuva yéni sirala et Ëarello entula?"
+1,Mandrake,elf,item,,,,,,
+2,Elf Race,elf,vote,,,,,,"Elves shall be the fairest of all earthly creatures, and they shall have and shall conceive and bring forth more beauty than all others, and they shall have the greater bliss in this world.; Also pointy ears!"
+1,Castle,human,building,,,,,+1 \M for each human creature when defending,"Draw bridge, machicolations, murder holes, hoardings, arrowslits, bartizans, embrasures, merlons, ..."
+1,Temple,human,building,,,,,,In nomine Patris et Filii et Spiritus sancti.
+1,Trebuchet,human,building,,,,,+3 \M when attacking,I'm TNT! I'm dynamite!
+1,Workshop,human,building,,,,,,"Look, I'm an engineer, my time is valuable."
+1,Craftsman,human,creature,,,,,Requires Workshop; Produces $G every turn,I'm being repressed!
+1,Knight,human,creature,,,,,,"Damn helmet, can't seem to get this thing..."
+1,Monk,human,creature,,,,,,Wololo.
+1,Peasant,human,creature,,,,,Produces $G every turn,"Ready for work!; ...; Work, again?"
+1,Priest,human,creature,,,,,Requires Tempe; Produces $M every turn,"One ring to rule them all, one ring to find them. One ring to bring them all, ...; Sorry, wrong book."
+1,Ranger,human,creature,,,,,,You have my sword.
+1,The King,human,"creature, artifact",,,,,Every Craftsman and Peasant produces an additional resource token,"The king commands, the nation obeys."
+1,Bible,human,item,1 $G,,,3,,"Knowledge, in the right hands, is the most powerful of all things."
+1,Book of Poems,human,item,1 $G,,2,,+2 \C if you have Mandolin,Time doesn’t heal wounds to make you forget.; Time leaves you with a scar to remind you of how you bled.
+1,Hookah,human,item,1 $G,,3,,,Eternal Smoke Dark Bean; Social Smoke Berry Punch; Starbuzz Blue Mist
+1,Mandolin,human,item,1 $G,,2,,+2 \C if you have Book of Poems,𝄠𝄰𝆔𝅘𝅥𝅮𝅗𝅗𝆕𝄗 𝄽𝄅𝇓𝅘𝅥𝅯𝅘𝅥𝅮𝄬𝅘𝅥𝅱𝄬𝆕𝅗𝅯𝆪𝅘𝅥𝅮 𝄆𝅘𝅥𝅮𝅝𝄽𝅘𝅥𝅮𝅘𝅥𝅯𝅗𝅘𝅥𝅯 𝆕𝄬𝄬𝆺𝅥𝅮𝇓𝅘𝅥𝅮𝅘𝅥𝅯𝅘𝅥𝅯𝄇 𝆔𝅝𝅗𝄽𝅗𝅘𝅥𝅮𝅗𝅝𝅝
+1,Mushroom Stew,human,item,1 $G,1,2,,,"Do you see the dragon?; No, but there is a unicorn staring at me."
+1,Sword,human,item,1 $G,3,,,"The Sword is free if you have Workshop, Craftsman, or Blacksmith",
+1,Doppelganger,human,spell,1 $M,,,,Play immediately after enemy spell that targets a creature; Choose another creature with same owner as replacement target for that spell,
+2,Human Race,human,vote,,,,,,Mediocre in all respects.
+1,Dwelling,orc,building,,,,,Once per turn: spend 5 resource tokens of any kind to create an Orc,
+1,Maze,orc,building,,,,,+2 \C if you have Minotaur,There is great treasue at the end. There is great minotaur in the way.
+1,Cyclop,orc,creature,,,,,,King among blind.
+1,Dragon,orc,creature,,,,,Kill one enemy creature; Produces $F every turn,"Look, I made an obsidian."
+1,Goblin,orc,creature,,,,,,"Judge me by my size, do you?"
+1,Hydra,orc,creature,,,,,Once per turn: spend 1 $M to grow additional head; +1 \M for each head,
+1,Medusa,orc,creature,,,,,,
+1,Minotaur,orc,creature,,,,,+2 \M if you have Maze,I am not a cyclop. I have two eyes.
+1,Orc,orc,creature,,,,,,"The more orc you have, the more orc you get."
+1,Troglodyte,orc,creature,,,,,,"Twolobite, ... trilobite, ... troglodyte!"
+1,Troll,orc,creature,,,,,,"Left head: 'This way!'; Right head: 'No, that way!'"
+1,Flesh,orc,item,1 $G,1,2,,,"Looks like meat's back on the menu, boys."
+1,Poison,orc,item,1 $G,3,,,,The coward's weapon.
+1,Illusion,orc,spell,2 $M,,,,Target own creature; Create temporary creature with same tags and attributes as printed on the target; Temporary creature is removed at the end of the turn,
+2,Orc Race,orc,vote,,,,,,"Brutish, aggressive, ugly, and malevolent race of monsters, descended from a corruption of elves."
+1,Graveyard,undead,building,,,,,Once per turn: spend 5 resource tokens of any kind to create a Skeleton,
+1,Tomb,undead,building,,,,,,Humans check in. They don't check out.
+1,Banshee,undead,creature,,,,,,
+1,Ghost,undead,creature,,,,,,"I'm invisible, gaseous, and deadly."
+1,Lich,undead,creature,,,,,Produces $M every turn,I always wanted to start my own religion... so I did!
+1,Mummy,undead,creature,,,,,,Just a glorified roll of toilet paper.
+1,Skeleton,undead,creature,,,,,,"No guts, no gory."
+1,Spectre,undead,creature,,,,,"At the end: target a creature, own or enemy; The spectre has same attributes as the printed attributes of the target",
+1,Vampire,undead,creature,,,,,Once per turn: spend 1 $M to steal 1 resource token of any kind from the enemy,I'm having a mid-death crisis.
+1,Werewolf,undead,creature,,,,,,
+1,Zombie,undead,creature,,,,,,
+1,The Grim Reaper,undead,"creature, artifact",,,,,,
+1,Plague,undead,spell,2 $M,,,,"All enemy non-undead creatures have -1 \M, +1 \F this turn","You may pray, but without breath you cannot fight."
+1,Raise Undead,undead,spell,3 $M,,,,"Requires Graveyard; Target dead non-undead creature, own or enemy, and remove it; Create a Skeleton",
+1,Will-o-the-wisp,undead,spell,2 $M,,,,Play in combat; Target enemy non-undead non-demonic creature; That creature is considered dead in this combat,
+2,Undead Race,undead,vote,,,,,,"Technically dead, but still animate."

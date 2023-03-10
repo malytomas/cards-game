@@ -1,4 +1,19 @@
 
 body {
 	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 4mm;
+}
+
+img {
+	height: 4mm;
+	margin-top: -0.6mm;
+}
+
+table {
+	text-align: center;
+}
+
+table img {
+	height: 20mm;
 }
