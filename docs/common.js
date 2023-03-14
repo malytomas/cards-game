@@ -35,12 +35,12 @@ function makeCosts(d) {
 function makeStats(d) {
 	let arr = [];
 	if (d.Military.length > 0)
-		arr.push(d.Military + " \\M");
+		arr.push(d.Military + "&nbsp;\\M");
 	if (d.Culture.length > 0)
-		arr.push(d.Culture + " \\C");
+		arr.push(d.Culture + "&nbsp;\\C");
 	if (d.Faith.length > 0)
-		arr.push(d.Faith + " \\F");
-	return replaceImages("&nbsp;" + arr.join(" &nbsp; ") + "&nbsp;");
+		arr.push(d.Faith + "&nbsp;\\F");
+	return replaceImages(arr.join("&nbsp; "));
 }
 
 function makeDescription(d) {
