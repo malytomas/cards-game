@@ -1,4 +1,9 @@
 
+:root {
+	--back-color: rgba(250, 235, 215, 0.7);
+	--box-shadow: 0 0 0.3mm 0.2mm gray;
+}
+
 * {
 	vertical-align: middle
 }
@@ -8,14 +13,17 @@ body {
 }
 
 .card {
+	display: block;
+	position: relative;
 	width: 60mm;
 	line-height: 1.15;
+	overflow: hidden;
 }
 
 .card .container {
 	position: relative;
 	width: 54mm;
-	height: 82mm;
+	height: 83mm;
 	margin: 3mm auto;
 	padding: 0mm;
 	border: 0.2mm solid white;
@@ -44,11 +52,12 @@ body {
 .card div.name {
 	position: absolute;
 	top: 2mm;
-	right: 4mm;
+	right: 3mm;
 	padding: 1mm 4mm;
-	border: 0.2mm solid gray;
 	border-radius: 1mm;
-	background-color: rgba(250, 235, 215, 0.85);
+	background-color: var(--back-color);
+	backdrop-filter: var(--back-filter);
+	box-shadow: var(--box-shadow);
 	font-family: "Brush Script MT", cursive;
 	font-size: 3mm;
 	text-align: center;
@@ -60,7 +69,7 @@ body {
 	width: 2.45mm;
 	top: 0.2mm;
 	bottom: 0.2mm;
-	border-radius: 0.5mm;
+	border-radius: 0.75mm;
 	background: url("media/gem.png") no-repeat;
 	background-size: 5mm 5mm;
 	opacity: 0.6;
@@ -80,10 +89,11 @@ body {
 	position: absolute;
 	left: 0.8mm;
 	top: 1.5mm;
-	padding: 1.3mm 1mm;
-	border: 0.2mm solid gray;
-	border-radius: 2.8mm;
-	background-color: rgba(250, 235, 215, 0.85);
+	padding: 0.4mm 1.2mm;
+	border-radius: 1mm;
+	background-color: var(--back-color);
+	backdrop-filter: var(--back-filter);
+	box-shadow: var(--box-shadow);
 	font-family: Garamond, serif;
 	font-size: 3mm;
 	text-align: center;
@@ -92,11 +102,12 @@ body {
 .card div.stats {
 	position: absolute;
 	left: 2.5mm;
-	bottom: 28.5mm;
-	padding: 0.2mm 1.5mm;
-	border: 0.2mm solid gray;
+	bottom: 30mm;
+	padding: 0.2mm 1.2mm;
 	border-radius: 1mm;
-	background-color: rgba(250, 235, 215, 0.85);
+	background-color: var(--back-color);
+	backdrop-filter: var(--back-filter);
+	box-shadow: var(--box-shadow);
 	font-family: Garamond, serif;
 	font-size: 3mm;
 	text-align: center;
@@ -106,12 +117,13 @@ body {
 	position: absolute;
 	left: 0.5mm;
 	right: 0.5mm;
-	top: 54.3mm;
+	top: 54.7mm;
 	bottom: 3.75mm;
 	padding: 0.5mm 1mm;
-	border: 0.2mm solid gray;
 	border-radius: 2mm;
-	background-color: rgba(250, 235, 215, 0.85);
+	background-color: var(--back-color);
+	backdrop-filter: var(--back-filter);
+	box-shadow: var(--box-shadow);
 	font-family: Arial, sans-serif;
 	display: flex;
 	flex-direction: column;
@@ -134,16 +146,25 @@ body {
 	font-size: 2.3mm;
 }
 
+.card div.lore::before {
+	content: open-quote;
+}
+
+.card div.lore::after {
+	content: close-quote;
+}
+
 .card div.tags {
 	position: absolute;
 	left: 10mm;
 	right: 10mm;
 	bottom: -0.1mm;
 	padding: 0.15mm 2mm;
-	border: 0.2mm solid gray;
 	border-top-left-radius: 1mm;
 	border-top-right-radius: 1mm;
-	background-color: rgba(250, 235, 215, 0.85);
+	background-color: var(--back-color);
+	backdrop-filter: var(--back-filter);
+	box-shadow: var(--box-shadow);
 	font-family: Georgia, serif;
 	font-size: 2.5mm;
 	text-align: center;
@@ -184,6 +205,10 @@ body {
 	background-image: url("media/gem-spell.png");
 }
 
-.card.tag-artifact .tags, .card.tag-artifact .name {
+.card.tag-artifact .tags {
 	background-color: rgba(250, 250, 250, 0.85);
+}
+
+.card .corner {
+	display: none;
 }

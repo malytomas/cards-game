@@ -66,11 +66,11 @@ function findCard(data, id) {
 
 function updateCards(data) {
 	d3.selectAll(".card").each(function() {
-		let sel = d3.select(this);
-		let d = findCard(data, sel.attr("data-card-id"));
-		sel.data([d]);
-		sel.attr("class", makeClasses);
-		let cont = sel.append("div").classed("container", true);
+		let card = d3.select(this);
+		let d = findCard(data, card.attr("data-card-id"));
+		card.data([d]);
+		card.attr("class", makeClasses);
+		let cont = card.append("div").classed("container", true);
 
 		cont.append("div")
 			.classed("picture", true)
@@ -121,6 +121,11 @@ function updateCards(data) {
 		cont.append("div")
 			.classed("tags", true)
 			.html(makeTags);
+
+		card.append("div").attr("class", "corner top left");
+		card.append("div").attr("class", "corner top right");
+		card.append("div").attr("class", "corner bottom left");
+		card.append("div").attr("class", "corner bottom right");
 	});
 }
 

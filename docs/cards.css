@@ -10,7 +10,6 @@
 
 	.card {
 		display: inline-block;
-		border: 1px dashed gray;
 	}
 }
 
@@ -25,6 +24,7 @@
 	body, html {
 		margin: 0px;
 		padding: 0px;
+		overflow: hidden;
 	}
 
 	#statistics {
@@ -35,6 +35,26 @@
 		page-break-before: never;
 		page-break-inside: never;
 		page-break-after: always;
-		margin-top: 0.01mm;
+		break-after: page;
+	}
+
+	.card .corner {
+		position: absolute;
+		display: block;
+		width: 0.1mm;
+		height: 0.1mm;
+		background-color: gray;
+	}
+	.card .corner.top {
+		top: 0;
+	}
+	.card .corner.bottom {
+		bottom: 0.2mm;
+	}
+	.card .corner.left {
+		left: 0;
+	}
+	.card .corner.right {
+		right: 0.3mm;
 	}
 }
