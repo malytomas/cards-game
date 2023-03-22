@@ -1,6 +1,5 @@
 
 body {
-	color: white;
 	font-family: Arial, sans-serif;
 	font-size: 4mm;
 }
@@ -16,4 +15,62 @@ table {
 
 table img {
 	height: 20mm;
+}
+
+.card {
+	border-radius: 2mm;
+}
+
+.examplecard_container {
+	position: relative;
+}
+
+.examplecard_card {
+	padding-left: 30mm;
+}
+
+.examplecard_name {
+	position: absolute;
+	left: 90mm;
+	top: 5mm;
+}
+
+.examplecard_cost {
+	position: absolute;
+	left: 90mm;
+	top: 10.5mm;
+}
+
+.examplecard_attributes {
+	position: absolute;
+	left: 30mm;
+	top: 50.5mm;
+}
+
+.examplecard_description {
+	position: absolute;
+	left: 30mm;
+	top: 63mm;
+}
+
+.examplecard_lore {
+	position: absolute;
+	left: 30mm;
+	top: 72.5mm;
+}
+
+.examplecard_tags {
+	position: absolute;
+	left: 30mm;
+	top: 81.5mm;
+}
+
+.examplecard_right {
+	margin-left: 1mm;
+}
+
+.examplecard_left {
+	width: 30mm;
+	margin-left: -31mm;
+	text-align: right;
 }

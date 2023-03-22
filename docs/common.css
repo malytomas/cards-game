@@ -8,16 +8,14 @@
 	vertical-align: middle
 }
 
-body {
-	background-color: rgb(17, 17, 17);
-}
-
 .card {
 	display: block;
 	position: relative;
 	width: 60mm;
 	line-height: 1.15;
 	overflow: hidden;
+	color: black;
+	background-color: rgb(17, 17, 17);
 }
 
 .card .container {
@@ -211,4 +209,20 @@ body {
 
 .card .corner {
 	display: none;
+}
+
+.card div.cardscount {
+	position: absolute;
+	top: 0;
+	left: 10mm;
+	padding: 0.1mm 0.5mm;
+	color: white;
+	background-color: black;
+	display: none;
+}
+
+@media screen {
+	.card.showcardscount div.cardscount {
+		display: block;
+	}
 }

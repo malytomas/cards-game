@@ -1,12 +1,4 @@
 
-function makeClasses(d) {
-	let arr = [];
-	for (let t of d.tgs)
-		arr.push("tag-" + t);
-	arr.push("card");
-	return arr.join(" ");
-}
-
 function makeImgSrc(d) {
 	return "images/" + d.id + ".png";
 }
@@ -69,7 +61,8 @@ function updateCards(data) {
 		let card = d3.select(this);
 		let d = findCard(data, card.attr("data-card-id"));
 		card.data([d]);
-		card.attr("class", makeClasses);
+		for (let t of d.tgs)
+			card.classed("tag-" + t, true);
 		let cont = card.append("div").classed("container", true);
 
 		cont.append("div")
@@ -126,6 +119,10 @@ function updateCards(data) {
 		card.append("div").attr("class", "corner top right");
 		card.append("div").attr("class", "corner bottom left");
 		card.append("div").attr("class", "corner bottom right");
+
+		card.append("div")
+			.classed("cardscount", true)
+			.text(d => d.Count);
 	});
 }
 
