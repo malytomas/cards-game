@@ -42,7 +42,7 @@
 
 <h3>Example card</h3>
 <div class="examplecard_container">
-<div class="examplecard_card"><div class="card" data-card-id="the_balrog"></div></div>
+<div class="examplecard_card"><div class="card" data-card-id="balrog"></div></div>
 <div class="examplecard_name examplecard_right">name</div>
 <div class="examplecard_cost examplecard_right">cost</div>
 <div class="examplecard_attributes examplecard_left">attributes</div>
@@ -65,64 +65,84 @@
 <p>Finally, each player receives 3 universal resource tokens (can be used as any of <img src="media/gold.png" alt="gold"> / <img src="media/mana.png" alt="mana"> / <img src="media/fire.png" alt="fire">).
 
 
-<h2>Rounds</h2>
+<h2>Rounds &amp; turns</h2>
 <p>The game is played in 6 rounds.
-<p>First player goes through all phases described below, in this order. After that goes the second player. After that is next round.
+<p>Each round, all players play one turn, one after another, always in the same order.
+<p>Each turn, the player plays the phases as described below, in this order.
 
-<h3>Production phase</h3>
-<p>Put extra cards face-down on creatures or buildings as the tokens they have produced.
+<h3>Beginning of turn phase</h3>
+<p>Apply <i>turn beginning</i> effects on cards.
+
+<h3>Transformations phase</h3>
+<p>Cards that allow transformations may transform now.
+<p>You need to have the cards to transform into in your hand.
+<p>The previous card goes back to your hand, and can be used for other transformations.
+<p>If the transformed card has any effects, they are applied immediately, except transformations and production.
+<p>Transformations do not cost any resources, even if there is some cost printed on the card.
+<p>Transformed creatures keep their items and tokens. Meaning of the tokens may be changed in this way.
+
+<h3>Production</h3>
+<p>Put extra cards face-down on creatures or buildings as the resource tokens they have produced.
 <p>The kind of a token is always known by the card it is placed on.
-<p>Tokens are always face-down cards taken from the remaining cards that were not assigned to either player.
+<p>Tokens are always face-down cards taken from the remaining cards that were not assigned to either player, or cards removed from the game.
 <p>You may choose from which cards to take tokens when spending them. It is possible to spend tokens from multiple cards at once.
+<p>Remove the cards representing the spent tokens from the game.
 
-<h3>Phase of choice</h3>
-<p>Choose either Creatures phase or Combat phase.
-<p>Do the chosen phase. After that proceed to Items phase.
+<h3>Combat phase</h3>
+<p>Decide if you want to attack your opponent and state your decision.
+<p>If you have decided to attack, proceed to the combat rules, then proceed to <i>Cards phase</i>.
+<p>If you have decided not to attack, proceed to the next phase normally.
 
-<h4>Creatures phase</h4>
+<h3>Creatures phase</h3>
 <p>Place one creature or building into the play on your side of the table.
-<p>If the creature/building has effects, they are immediately applied, except production.
+<p>If the creature/building has effects, they are immediately applied, except transformation and production.
 <p>You can have at most one artifact. Artifacts cannot be killed, stolen, or removed.
-
-<h4>Combat phase</h4>
-<p>State your intention to attack.
-<p>Proceed by the combat rules.
 
 <h3>Items phase</h3>
 <p>Give items to own creatures.
-<p>You may give up to 2 items in one round.
+<p>You may give up to 2 items in one turn.
 <p>Effects on the items, if any, are immediately applied, except production.
 <p>Each creature may have at most one item. Buildings cannot have any items.
+<p>Creatures of some races cannot have items, but you may give items to other creatures even if you have chosen such race.
 
 <h3>Spells phase</h3>
 <p>Play non-combat spells.
-<p>You may play up to 2 spells in one round.
+<p>You may play up to 2 spells in one turn.
 <p>Used spell cards are removed from the game.
 
-<h3>Cards Phase</h3>
+<h3>Cards phase</h3>
 <p>Discard up to 5 cards and draw same amount plus two.
+
+<h3>End of turn phase</h3>
+<p>Apply <i>turn end</i> effects on cards.
 
 
 <h2>Final game evaluation</h2>
 <p>Dead creatures may be resurrected for 1 <img src="media/mana.png" alt="mana"> each and buildings for 1 <img src="media/gold.png" alt="gold"> each.
-<p>All <i>at the end</i> rules are applied.
+<p>All <i>game end</i> rules are applied.
 <p>Each creature and building decides if it is considered as attacking, defending, or out of combat.
 <p>All <i>non-final</i> additive, multiplicative, and conversion effects are applied, in this order.
 <p>Attributes from all cards are summed for each player.
 <p>All <i>final</i> effects are applied: additive, multiplicative, and conversions, in this order.
-<p>Players with all cards (except spells) of the same race gain bonus +15 to <img src="media/culture.png" alt="Culture">.
+<p>Players with all cards in play (creatures, buildings, and items) of the same race gain bonus +10 to <img src="media/culture.png" alt="Culture">.
 <p>Players with negative <img src="media/faith.png" alt="Faith"> multiply it by -1.
 <p>Winner is decided (use first applicable rule):
 <p><ul>
-<li><p>If one player has more than a 50 lead in one attribute (<img src="media/military.png" alt="M"> / <img src="media/culture.png" alt="C"> / <img src="media/faith.png" alt="F">) that player wins, unless the other player has over a 50 lead in another attribute.
-<li><p>The player who leads (by any amount) in more attributes (<img src="media/military.png" alt="M"> / <img src="media/culture.png" alt="C"> / <img src="media/faith.png" alt="F">) wins.
-<li><p>The player with the highest sum (<img src="media/military.png" alt="M"> + <img src="media/culture.png" alt="C"> + <img src="media/faith.png" alt="F">) wins.
+<li><p>If one player has more than 30 lead in one attribute (<img src="media/military.png" alt="M"> / <img src="media/culture.png" alt="C"> / <img src="media/faith.png" alt="F">), that player wins, unless the other player has over 30 lead in another attribute.
+<li><p>Player who leads (by any amount) in more attributes (<img src="media/military.png" alt="M"> / <img src="media/culture.png" alt="C"> / <img src="media/faith.png" alt="F">) wins.
+<li><p>Player with the highest sum of attributes (<img src="media/military.png" alt="M"> + <img src="media/culture.png" alt="C"> + <img src="media/faith.png" alt="F">) wins.
+<li><p>Player with more resource tokens (<img src="media/gold.png" alt="G"> + <img src="media/mana.png" alt="M"> + <img src="media/fire.png" alt="F">) wins.
+<li><p>Its a draw.
 </ul>
 
 
 <h2>Combat rules</h2>
 <p>Winner of the combat kills (disables) one of opponent's creatures or buildings.
 <p>TODO: defending with faith
+
+
+<h2>Dead creatures</h2>
+<p>TODO
 
 
 <h2>Miscellaneous</h2>

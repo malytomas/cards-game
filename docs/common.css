@@ -54,7 +54,6 @@
 	padding: 1mm 4mm;
 	border-radius: 1mm;
 	background-color: var(--back-color);
-	backdrop-filter: var(--back-filter);
 	box-shadow: var(--box-shadow);
 	font-family: "Brush Script MT", cursive;
 	font-size: 3mm;
@@ -90,7 +89,6 @@
 	padding: 0.2mm 1.2mm;
 	border-radius: 1mm;
 	background-color: var(--back-color);
-	backdrop-filter: var(--back-filter);
 	box-shadow: var(--box-shadow);
 	font-family: Garamond, serif;
 	font-size: 3mm;
@@ -104,7 +102,6 @@
 	padding: 0.2mm 1.2mm;
 	border-radius: 1mm;
 	background-color: var(--back-color);
-	backdrop-filter: var(--back-filter);
 	box-shadow: var(--box-shadow);
 	font-family: Garamond, serif;
 	font-size: 3mm;
@@ -120,7 +117,6 @@
 	padding: 0.5mm 1mm;
 	border-radius: 2mm;
 	background-color: var(--back-color);
-	backdrop-filter: var(--back-filter);
 	box-shadow: var(--box-shadow);
 	font-family: Arial, sans-serif;
 	display: flex;
@@ -154,14 +150,13 @@
 
 .card div.tags {
 	position: absolute;
-	left: 10mm;
-	right: 10mm;
+	left: 9mm;
+	right: 9mm;
 	bottom: -0.1mm;
-	padding: 0.15mm 2mm;
+	padding: 0.15mm 1mm;
 	border-top-left-radius: 1mm;
 	border-top-right-radius: 1mm;
 	background-color: var(--back-color);
-	backdrop-filter: var(--back-filter);
 	box-shadow: var(--box-shadow);
 	font-family: Georgia, serif;
 	font-size: 2.5mm;
