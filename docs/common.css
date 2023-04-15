@@ -19,7 +19,7 @@
 }
 
 :root {
-	--back-color: rgba(250, 235, 215, 0.7);
+	--back-color: rgba(250, 235, 215, 0.75);
 	--box-shadow: 0 0 0.3mm 0.2mm gray;
 }
 

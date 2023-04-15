@@ -2,14 +2,14 @@ Race,Tags,Name,Count,Cost,Military,Culture,Faith,Description,Lore
 critter,creature,Drone,3,,,,,Produces 1 $G every turn; Transforms into an adult critter,
 critter,creature,Larva,3,,,,,Transforms into Drone,
 critter,"creature, adult",Butterfly,2,,,2,,,
-critter,"creature, adult",Crab,2,,2,,,,Walks sideways.
+critter,"creature, adult",Crab,2,,1,,,Defending: +2 \M,Walks sideways.
 critter,"creature, adult",Firefly,2,,,1,,Produces 1 $F every turn,
-critter,"creature, adult",Locust,2,,2,,,,"My favorite creatures are centaurs.; They have six limbs, which makes them insect, just like me."
-critter,"creature, adult",Octopus,2,,,,,,
+critter,"creature, adult",Mosquito,3,,2,,,,"My favorite creatures are centaurs.; They have six limbs, which makes them insect, just like me."
 critter,"creature, adult",Queen,2,,,,,Produces additional Larva every turn,
-critter,"creature, adult",Scorpion,2,,2,,,,Round 1; Fight; There is no justice.
+critter,"creature, adult",Scorpion,2,,1,,,Win combat: give Venom to enemy creature,Round 1; Fight; There is no justice.
 critter,"creature, adult",Spider,2,,1,,,Win combat: give Cobweb to enemy creature,
 critter,item,Cobweb,3,,,-1,,Cannot be given directly,
+critter,item,Venom,3,,-1,,,Cannot be given directly,
 critter,,Critters race,2,,,,,Critters creatures cannot have any items,"Arthropods are a diverse group of invertebrates that includes insects, arachnids, crustaceans, and many other types of animals."
 demonic,building,Sacrificial Shrine,1,,,,-1,Gain 1 $F whenever own creature is sacrificed or killed,The fires are bright and full of screams.
 demonic,creature,Cerberus,3,,2,,,Win combat: gain 1 $F,What is more than 1 head? Two heads!; What is more than 2 heads? Three heads!
@@ -20,12 +20,12 @@ demonic,"creature, artifact",Mephisto,1,,,,-2,"Grants -1 \F to all creatures, ow
 demonic,item,Corrupt Soul Gem,2,1 $G,,,-1,Gain 2 $M,
 demonic,item,Desecrated Urn,1,1 $G,,,-1,Give to own or enemy creature,
 demonic,item,Embers,1,1 $G,,,,Produces 1 $F every turn,"Made in the hell, burns forever."
-demonic,item,Incantation Scroll,1,1 $G,,,,,"Malla, Eer, Dul, Aman, Shala, Ros, Ackra, Sheer, Thalla, Salthrak, Imar, Kalador, An’perath, O’sakana, Ferik, ..."
-demonic,spell,Break,2,1 $M,,,,Destroy enemy item,Your staff is broken.
+demonic,item,Incantation Scroll,1,1 $G,,,,Produces 1 $M every turn,"Malla, Eer, Dul, Aman, Shala, Ros, Ackra, Sheer, Thalla, Salthrak, Imar, Kalador, An’perath, O’sakana, Ferik, ..."
+demonic,spell,Break,2,1 $M,,,,"Destroy item, own or enemy",Your staff is broken.
 demonic,spell,Burn,2,1 $M,,,,Destroy 2 enemy $G or $M,
 demonic,spell,Curse,2,1 $M,,,,Combat: target enemy creature; That creature has its attributes halved (rounds toward zero) until end of the combat,Death is the only way to lift the curse.
 demonic,spell,Illusion,2,1 $M,,,,Target own creature; Create temporary creature with same tags and attributes as printed on the target; It is removed at the end of the turn or combat,
-demonic,spell,Possess,2,1 $M,,,,Sacrifice (remove from game) own demonic creature; Kill enemy creature,
+demonic,spell,Possess,1,3 $M,,,,Sacrifice (remove from game) own demonic creature; Steal enemy creature,
 demonic,spell,Unholly Might,1,3 $M,,,,"Combat: all creatures (own and enemy) with negative \F gain +1 \M, with positive \F gain -1 \M",
 demonic,spell,Unthinkable,1,3 $M,,,,Sacrifice (remove from game) own artifact,
 demonic,,Demonic Race,2,,,,,,
@@ -43,57 +43,56 @@ divine,"item, deathly hallow",Elder Wand,1,1 $G,,,,Produces 1 $M every turn; Imm
 divine,spell,Blessing,2,1 $M,,,,Combat: target own creature; That creature has its attributes doubled until end of the combat,
 divine,spell,Counterspell,4,1 $M,,,,Play immediately after enemy spell to cancel it; Cannot cancel Counterspell,Expelliarmus
 divine,spell,Creation,1,1 $M,,,,Draw 5 cards,
-divine,spell,Lightning Bolt,3,1 $M,,,,Kill enemy creature,Death as fast as light.
-divine,spell,Omniscience,1,1 $M,,,,Enemy player reveals their hand untill end of your turn,
+divine,spell,Lightning Bolt,3,2 $M,,,,Kill enemy creature,Death as fast as light.
+divine,spell,Omniscience,1,1 $M,,,,Opponent reveals their hand untill end of your turn,
 divine,spell,Resurrect,3,1 $M,,,,Resurrect own dead non-undead non-demonic creature,"The stars wheeled overhead, and every day was as long as a life age of the earth. But it was not the end. I felt life in me again. I've been sent back until my task is done."
 divine,spell,Time Dilation,1,5 $M,,,,Play additional turn immediately after you finish this turn,
-divine,spell,True Aura,1,1 $M,,,,,
 divine,,Divine Race,2,,,,,,
-dwarf,building,Dwarf Fortress,1,,,,,Defending: +5 \M,Booze does all the work in forts.; Dwarves are just booze exoskeletons.
-dwarf,building,Explosive Trap,3,1 $F,,,,Place additional creature or building; Defending: +2 \M,"There are four wires: red, green, yellow, and another red.; They all cause detonation.; There is no disarming the trap."
+dwarf,building,Dwarf Fortress,1,,2,,,Defending: +2 \M,Booze does all the work in forts.; Dwarves are just booze exoskeletons.
+dwarf,building,Explosive Trap,3,1 $F,,,,Place additional creature or building; Defending: +3 \M; Remove the trap from the game after the combat,"There are four wires: red, green, yellow, and another red.; They all cause detonation.; There is no disarming the trap."
 dwarf,building,Guild,1,,,,,Game end: spend all $G to gain same amount in one of \M/\C/\F,Money buys you anything.
 dwarf,building,Iron Forge,1,,,,,Always have all own $F on this card; Produces $F equal to half of $F on this card (rounds down),
 dwarf,building,Mechanical Golem,1,,3,,,,
 dwarf,building,Talos Automaton,1,,1,,,Defending: +4 \M,Talos is the Sun.
 dwarf,building,Vault,1,,,,,Always have all own $G on this card; Produces $G equal to half of $G on this card (rounds down),Gems and money is what makes a dwarf happy.
-dwarf,building,Zeppelin,1,,,,,,
-dwarf,creature,Blacksmith,2,,,,,,Tailor for the wealthy.; I mean... for the dwarfs.; ...; For wealthy dwarfs.
+dwarf,building,Zeppelin,1,,2,,,Opponent must reveal first two cards they draw in their Cards phase,
+dwarf,creature,Blacksmith,2,,,,,Grant +1 \M to all other dwarf creatures,Tailor for the wealthy.; I mean... for the dwarfs.; ...; For wealthy dwarfs.
 dwarf,creature,Miner,2,,,,,Produces 1 $G every turn,The spirits of the earth guide me.; You mean metal ores.; Of course.
-dwarf,creature,Runesmith,2,,,,,,
-dwarf,"creature, artifact",Gimli,1,,,,,,I’m wasted on cross-country. We dwarves are natural sprinters. Very dangerous over short distances.
+dwarf,creature,Runesmith,2,,,2,,,
+dwarf,"creature, artifact",Gimli,1,,3,,,Game end: grant +2 \M to all other dwarf creatures,I’m wasted on cross-country. We dwarves are natural sprinters. Very dangerous over short distances.
 dwarf,item,Boomstick,3,1 $F,2,,,,Good. Bad. I'm the guy with the gun.
 dwarf,item,Booze,3,1 $G,,2,,,"If it's not made of stone or metal, it should be made of beer."
 dwarf,item,Jewel,3,1 $G,,2,,,"Antique ruby pendant with perfect diamond cut, flawless clarity and deep red color, 3 carats."
 dwarf,item,Mithril,1,2 $G,2,,,Defending: +2 \M,"The mithril coat shone like moonlit silver, and it was woven with enchantments that made it strong as steel, but light as a feather."
 dwarf,spell,Repair,1,1 $G,,,,Repair (resurrect) own dead building,
-dwarf,,Dwarf Race,2,,,,,,Dwarves delved too greedily and too deep.
-elf,building,Fangorn Forest,1,,,,,Defending: grants +1 \M to all Ents and Druids,
-elf,building,Sacred Grove,1,,,,,Grants +1 \F to all Entwives and Dryads,
+dwarf,,Dwarf Race,2,,,,,,"Dwarves delved too greedily and too deep, and awoken shadow and flame, that is too great of a foo."
+elf,building,Fangorn Forest,1,,1,,,Grants +1 \M to all Ents and Druids,
+elf,building,Sacred Grove,1,,,,1,Grants +1 \F to all Entwives and Dryads,
 elf,building,Yggdrasil,1,,,2,1,,Greatest civilizations are grown from the ashes of their foes.
 elf,creature,Druid,3,,,,,Produces 1 $M every turn; +1 \C for each Dryad,"One tree, two trees, tree threes, ... three trees, ... I have to stop playing the dies, ... the dices ..."
-elf,creature,Dryad,3,,,1,,+1 \C for each Druid,
+elf,creature,Dryad,3,,,1,,+1 \C for each Druid,Nature is restless.
 elf,creature,Ent,3,,,,,Produces 1 $G every turn; +1 \C for each Entwife,"You see, we lost the entwives."
 elf,creature,Entwife,3,,,1,,+1 \C for each Ent,"I am right here, you dumb***."
-elf,"creature, artifact",Galadriel,1,,,,,,"Light of the White Tree of Valinor, made by Valar, is reflected in her eyes, for she is the last survivor who has seen it."
-elf,"creature, artifact",Legolas,1,,,,,Combat: kill enemy creature at the beginning of the combat,A red sun rises. Blood has been spilled this night.
+elf,"creature, artifact",Galadriel,1,,,3,,"Game end: spend all $G to gain same amout in \C, spend all $M to gain \F","Light of the White Tree of Valinor, made by Valar, is reflected in her eyes, for she is the last survivor who has seen it."
+elf,"creature, artifact",Legolas,1,,3,,,Combat: kill enemy creature at the beginning of the combat,A red sun rises. Blood has been spilled this night.
 elf,item,Book of Laments,3,1 $G,,2,,,"Massë ná romba i súyanë? Avániër vë mistë orossë, vë súlimë lairenna. Var cenuva yéni sirala et Ëarello entula?"
 elf,item,Lembas,3,1 $G,,2,,,One small bite is enough to fill the stomach of a grown man.
-elf,"item, deathly hallow",Invisibility Cloak,1,1 $G,,,,Prevents its wearer from being targeted by enemy spells; Immediately win if you have all three deathly hallows,No peeping!
-elf,spell,Mirror Fountain,1,1 $M,,,,,The mirror shows many things.; Things that were. Things that are. And some things that have not yet come to pass.
+elf,item,Mirror Fountain,1,1 $M,1,,1,,The mirror shows many things.; Things that were. Things that are. And some things that have not yet come to pass.
+elf,"item, deathly hallow",Invisibility Cloak,1,1 $G,,,,Prevents its wearer from being targeted by opponents spells; Immediately win if you have all three deathly hallows,No peeping!
 elf,,Elf Race,2,,,,,,"Elves shall be the fairest of all earthly creatures, and they shall have and shall conceive and bring forth more beauty than all others, and they shall have the greater bliss in this world.; Also pointy ears!"
-human,building,Castle,1,,,,,Defending: +5 \M,"Draw bridge, machicolations, murder holes, hoardings, arrowslits, bartizans, embrasures, merlons, ..."
+human,building,Castle,1,,2,,,Defending: +2 \M,"Draw bridge, machicolations, murder holes, hoardings, arrowslits, bartizans, embrasures, merlons, ..."
 human,building,Temple,1,,,,3,,In nomine Patris et Filii et Spiritus sancti.
 human,building,Trebuchet,1,,3,,,,I'm TNT! I'm dynamite!
-human,building,Workshop,1,,,,,Produces $G equal to number of Craftsmans every turn,
+human,building,Workshop,1,,,,,Produces $G equal to number of your Craftsmans every turn,If it is not working it needs more tape. Thats it.
 human,creature,Craftsman,3,,,2,,,I'm being repressed!
 human,creature,Knight,2,1 $G,1,1,1,,"Damn helmet, can't seem to get this thing..."
-human,creature,Monk,2,,,,2,Combat: the Monk uses \F instead of \M,Wololo.
+human,creature,Monk,2,,,,2,Combat: the Monk uses \F in place of \M,Wololo.
 human,creature,Peasant,2,,,1,,Produces 1 $G every turn,"Ready for work!; ...; Work, again?"
 human,creature,Priest,2,,,,1,Produces 1 $M every turn,"One ring to rule them all, one ring to find them. One ring to bring them all, ...; Sorry, wrong book."
-human,creature,Saboteur,2,,-2,,,Place into opponents play,
-human,creature,Thief,2,,,,,Steal item from enemy creature and give it to the Thief,
+human,creature,Saboteur,2,,-2,,,Place into opponents play,Ready to take things apart.
+human,creature,Thief,2,,,,,Steal item from enemy creature and give it to the Thief,I'll relieve them of their burden!; I'm a professional.
 human,creature,Wizard,2,1 $M,3,,,,You shall not pass!
-human,"creature, artifact",Théoden,1,,,,,Grants +1 \M to all own human creatures and buildings,"Where is the horse and the rider? Where is the horn that was blowing? They have passed like rain on the mountain, like wind in the meadow. The days have gone down in the West behind the hills into shadow. How did it come to this?"
+human,"creature, artifact",Théoden,1,,2,,1,Grants +1 \M to all own human creatures and buildings,"Where is the horse and the rider? Where is the horn that was blowing? They have passed like rain on the mountain, like wind in the meadow. The days have gone down in the West behind the hills into shadow. How did it come to this?"
 human,item,Bible,1,1 $G,,,2,,"And God said, “Let there be light,” and there was light."
 human,item,Book of Poems,1,1 $G,,1,,+2 \C if you have Mandolin,Time doesn’t heal wounds to make you forget.; Time leaves you with a scar to remind you of how you bled.
 human,item,Drama Mask,1,1 $G,,2,,,"To be, or not to be, that is the question."
@@ -110,37 +109,38 @@ mythical,creature,Dragon,1,2 $M,2,,,Produces 1 $F every turn; Kill enemy creatur
 mythical,creature,Faerie,1,,,2,,,The fairest of them all.
 mythical,creature,Griffin,1,1 $M,1,1,1,,"Stand straight, walk proud, have a little faith."
 mythical,creature,Harpy,1,,1,,-1,,I smell magic in the air.; Or maybe barbecue.
-mythical,creature,Hydra,1,1 $M,2,,,Win combat: grows additional head; +2 \M for each head,
-mythical,creature,Mandrake,1,,,2,,,
-mythical,creature,Medusa,1,,1,,,Kill enemy non-undead creature,
+mythical,creature,Hydra,1,1 $M,2,,,Win combat: grows additional head; +2 \M for each head,"One neck down, two more to go."
+mythical,creature,Medusa,1,,1,,,Kill enemy non-undead creature,"Do not look into a mirror, lest you want to be preserved in stone forever."
 mythical,creature,Minotaur,1,1 $G,2,,,+2 \M if you have Labyrinth,I am not a cyclop. I have two eyes.
-mythical,creature,Phoenix,1,2 $F,,3,,Gain 1 $F tokens when resurrected; Turn end: resurrect if dead,
+mythical,creature,Phoenix,1,2 $F,,3,,Gain 1 $F token when resurrected; Turn end: resurrect if dead,Let the fire burn away what no longer serves you.
 mythical,creature,Satyr,1,1 $M,,2,,Steal random card from opponents hand,"Revelry, wine, and music."
 mythical,creature,Troglodyte,1,,1,,,Draw 2 cards,"Twolobite, ... trilobite, ... troglodyte!"
-mythical,creature,Unicorn,1,,,1,,Produces 1 $M every turn,
+mythical,creature,Unicorn,1,,,1,,Produces 1 $M every turn,Rainbows! Pink!
 mythical,creature,Werehuman,1,,,2,,Transforms into Werewolf,
 mythical,creature,Werewolf,1,,2,,,Transforms into Werehuman,
 mythical,creature,Wisp,1,,,1,,Produces 1 $M every turn,"Eo, eo, eo."
-mythical,"creature, artifact",Kraken,1,,,,,,
-mythical,item,Leprechaun Pendant,2,1 $G,,2,,Gives you luck,Humans believe in luck and in circumstances.; We believe in cause and effect.
+mythical,"creature, artifact",Kraken,1,,10,,,You must have at least 3 other mythical creatures to place the Kraken into play,
+mythical,item,Leprechaun Pendant,2,1 $G,,2,,,Humans believe in luck and in circumstances.; We believe in cause and effect.
 mythical,item,Lexico Innaturale,1,1 $G,,,,"+1 \C for each race present in the game (excluding spells), own or enemy","There are many different worlds in this universe. Some typical, others very strange and unnatural."
+mythical,item,Mandrake,1,1 $G,,2,,,"Powdered moonstone, syrup of hellebore, crushed pearls, ashwinder eggs, squill bulb, and root of mandrake. Slowly stir while boiling. If done right, you get a powerful love poition. But a single misstep and you get poison. Think carefully who you give it to."
+mythical,"item, deathly hallow",Resurrection Stone,1,1 $G,,,,"Can give to already dead creature; Turn end: resurrect the wearer, if dead; Immediately win if you have all three deathly hallows",
 mythical,spell,Transfiguration,1,1 $M,,,,Rearrange resource tokens between all your cards that can store them; Changing type of tokens is allowed,Turning water into wine is faith.; Turning copper into gold is alchemy.
-mythical,spell,Upside Down,1,1 $M,,,,,Alternate dimension that mirrors our world.
 mythical,,Mythical Race,2,,,,,,"Creatures of legend, born of myth and magic."
-orc,creature,Goblin,2,,1,,,Win combat: steal 1 $G,"Judge me by my size, do you?"
-orc,creature,Oliphaunt,2,2 $G,4,,,Two killing actions in one turn are required to kill the Oliphaunt,"And so it was that in the hour of need the great elephants, guided by the magic of the wizards, were arrayed in final battle to break the lines of our foes, and their trumpeting filled the air."
+orc,creature,Goblin,3,,1,,,Win combat: steal 1 $G,"Judge me by my size, do you?"
+orc,creature,Oliphaunt,2,2 $G,4,,,Two killing actions within one turn are required to kill the Oliphaunt,"And so it was that in the hour of need the great elephants, guided by the magic of the wizards, were arrayed in final battle to break the lines of our foes, and their trumpeting filled the air."
 orc,creature,Shaman,2,,1,,1,,
-orc,creature,Troll,2,,2,,,,"Left head: 'This way!'; Right head: 'No, that way!'"
+orc,creature,Troll,2,1 $G,3,,,,"Left head: 'This way!'; Right head: 'No, that way!'"
 orc,creature,Warg,2,,2,,,,
 orc,creature,Warlock,2,,1,,-1,,
-orc,"creature, artifact",Gul'dan,1,,,,,Sacrifice (remove from game) a number of own creatures; Permanently grant +1 \M to all own orc creatures for every sacrificed creature,"The necrolytes have served their purpose. Now they shall have a new one, an even greater one. Gather our implements."
-orc,"creature, artifact",Thrall,1,,,,,Final: choose two attributes (\M/\C/\F) and exchange their values.,"A risky plan, but what is life without risk, eh?; For the Horde!"
+orc,"creature, artifact",Gul'dan,1,,,,-2,Sacrifice (remove from game) a number of own creatures; Permanently grant +1 \M to all own orc creatures for every sacrificed creature,"The necrolytes have served their purpose. Now they shall have a new one, an even greater one. Gather our implements."
+orc,"creature, artifact",Sauron,1,,,,-5,Place additional Goblin; Opponent plays with their hand revealed,"Sorcerer of dreadful power, master of shadows and of phantoms, foul in wisdom, cruel in strength, misshaping what he touched, twisting what he ruled. His dominion was torment."
+orc,"creature, artifact",Thrall,1,,3,,,Final: choose two attributes (\M/\C/\F) and exchange their values.,"A risky plan, but what is life without risk, eh?; For the Horde!"
 orc,item,Bone Dagger,1,1 $G,1,,-1,,Embrace the darkness within and make offerings in blood and flesh.
-orc,item,Fel Magic,2,1 $G,5,,,Game end: kill the creature holding Fel Magic,"It promises great power, but it exacts a terrible price."
-orc,item,Meat,1,1 $G,,,,+2 \M and +2 \C if given to an orc,"Looks like meat's back on the menu, boys."
-orc,item,Poison,1,1 $G,-1,,,Give to enemy non-undead creature,Coward's weapon.
-orc,item,Spikes,3,1 $G,,,,+2 \M and +2 \C if given to an orc,
-orc,spell,Berserker,2,,,,,Combat: target a creature. That creature has doubled \M. The creature is killed at the end of the combat.,
+orc,item,Fel Magic,2,1 $G,4,,,Game end: kill the creature holding Fel Magic,"It promises great power, but it exacts a terrible price."
+orc,item,Meat,1,1 $G,,2,,+2 \M and -2 \C if given to an orc,"Looks like meat's back on the menu, boys."
+orc,item,Poison,1,1 $G,-1,,,Give to enemy creature,Coward's weapon.
+orc,item,Spikes,3,1 $G,1,,,+2 \M if given to an orc,Pointy end towards the enemy.
+orc,spell,Berserker,2,,,,,Combat: target own creature. That creature has doubled \M. The creature is killed at the end of the combat.,
 orc,,Orc Race,2,,,,,,"Brutish, aggressive, ugly, and malevolent race of monsters, descended from a corruption of elves."
 undead,building,Graveyard,1,,,,,"Gain 1 $M whenever a creature is killed, own or enemy",Humans check in. They don't check out.
 undead,building,Tomb,1,,,1,,Gain 2 $G,Most people disdain gravedigging.; Undead call it recycling.
@@ -148,15 +148,14 @@ undead,creature,Ghost,1,,2,,-1,,"I'm invisible, gaseous, and deadly."
 undead,creature,Lich,1,,1,,-1,Produces 1 $M every turn,I always wanted to start my own religion... so I did!
 undead,creature,Mummy,1,,-1,,-4,,Just a glorified roll of toilet paper.
 undead,creature,Phantom,1,1 $M,3,,-1,,
-undead,creature,Skeleton,3,,2,,,Spend 1 $M to transform into Zombie,"No guts, no gore."
-undead,creature,Spectre,1,,,,,"Game end: target non-artifact creature, own or enemy; The spectre has same attributes as printed on the target",
+undead,creature,Skeleton,3,,1,,,Spend 1 $M to transform into Zombie,"No guts, no gore."
+undead,creature,Spectre,1,,,,,"Game end: target a creature, own or enemy; The spectre has same attributes as printed on the target","Vampires have no reflection in mirrors, so they use spectres instead."
 undead,creature,Vampire,1,,2,,-1,Turn end: spend 1 $M to steal a resource token from enemy,I'm having a mid-death crisis.
-undead,creature,Zombie,3,,3,,-1,Cannot be placed directly,
-undead,"creature, artifact",Dracula,1,,,,,,
-undead,"creature, artifact",Grim Reaper,1,,,,,,
-undead,"item, deathly hallow",Resurrection Stone,1,1 $G,,,,"Can give to already dead creature; Turn end: resurrect the wearer, if dead; Immediately win if you have all three deathly hallows",
-undead,spell,Plague,1,3 $M,,,,"Combat: all enemy non-undead creatures have -1 \M, +1 \F","You may pray, but without breath you cannot fight."
-undead,spell,Raise Undead,2,? $M,,,,Place additional Skeleton for every 2 $M spent on this spell,
-undead,spell,Rotten Paper,2,1 $M,,,,Enemy player discards 3 random cards,
-undead,spell,Will-o-the-wisp,2,1 $M,,,,Combat: target enemy non-undead non-demonic creature; That creature does not participate in this combat,
+undead,creature,Zombie,3,,3,,-1,Cannot be placed directly,"Slow, but they never tire, never stop, and never give up."
+undead,"creature, artifact",Balon Greyjoy,1,,3,,,Undead creatures and buildings cannot be killed,"What is dead may never die, but rises again, harder and stronger."
+undead,"creature, artifact",Dracula,1,,,,-2,"Spend 1 $M to transform one non-undead creature, own or enemy, into any undead creature; (This effect is played in Transformations phase)",Do not waste life on those who do not deserve it.
+undead,spell,Plague,1,2 $M,,,,"Combat: all enemy non-undead creatures have -1 \M, +1 \F","You may pray, but without breath you cannot fight."
+undead,spell,Raise Undead,2,? $M,,,,Place additional Skeleton for every $M spent on this spell,"Necromancy is not for the faint of heart. It requires a strong will and a steady hand, for the dead are not always cooperative."
+undead,spell,Rotten Paper,2,1 $M,,,,Enemy player discards 3 random cards from their hand,"Rotten ""paper"" - made by undead.; What do you think it is made of?; It is not bones, you know."
+undead,spell,Will-o-the-wisp,2,1 $M,,,,Combat: target enemy non-undead creature; That creature does not participate in this combat,Not all that glitters is gold.
 undead,,Undead Race,2,,,,,Undead creatures cannot have any items,"Technically dead, but still animate."
