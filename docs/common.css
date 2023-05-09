@@ -5,12 +5,12 @@
 
 @font-face {
 	font-family: cardFontName;
-	src: url('https://fonts.cdnfonts.com/s/96456/TT Prosto Sans Trial Italic.woff');
+	src: url('https://fonts.cdnfonts.com/s/96456/TT Prosto Sans Trial Bold.woff');
 }
 
 @font-face {
 	font-family: cardFontLore;
-	src: url('https://fonts.cdnfonts.com/s/95177/EVOLITTA.woff');
+	src: url('https://fonts.gstatic.com/s/indieflower/v17/m8JVjfNVeKWVnh3QMuKkFcZVaUuH.woff2');
 }
 
 @font-face {
@@ -132,7 +132,7 @@
 	right: 0.5mm;
 	top: 54.7mm;
 	bottom: 3.75mm;
-	padding: 0.5mm 1mm;
+	padding: 0.5mm 1.5mm;
 	border-radius: 2mm;
 	background-color: var(--back-color);
 	box-shadow: var(--box-shadow);
@@ -153,8 +153,9 @@
 }
 
 .card div.lore {
-	font-family: cardFontLore;
+	font-family: cardFontLore, cursive;
 	font-size: 2.3mm;
+	text-align: center;
 }
 
 .card div.lore::before {
@@ -170,14 +171,15 @@
 	left: 9mm;
 	right: 9mm;
 	bottom: -0.1mm;
-	padding: 0.15mm 1mm;
+	padding: 0.4mm 1mm;
 	border-top-left-radius: 1mm;
 	border-top-right-radius: 1mm;
 	background-color: var(--back-color);
 	box-shadow: var(--box-shadow);
 	font-family: cardFontTags;
-	font-size: 2.5mm;
+	font-size: 2mm;
 	text-align: center;
+	text-transform: uppercase;
 }
 
 .card div.separator {
