@@ -71,6 +71,10 @@ function updateCards(data) {
 			.attr("src", makeImgSrc)
 			.attr("alt", makeImgSrc);
 
+		cont.append("div")
+			.classed("tags", true)
+			.html(makeTags);
+
 		let box = cont.append("div")
 			.classed("box", true);
 
@@ -110,10 +114,6 @@ function updateCards(data) {
 				.classed("lore", true)
 				.html(makeLore);
 		}
-
-		cont.append("div")
-			.classed("tags", true)
-			.html(makeTags);
 
 		card.append("div").attr("class", "corner top left");
 		card.append("div").attr("class", "corner top right");

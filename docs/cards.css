@@ -37,26 +37,6 @@
 		page-break-after: always;
 		break-after: page;
 	}
-
-	.card .corner {
-		position: absolute;
-		display: block;
-		width: 0.1mm;
-		height: 0.1mm;
-		background-color: gray;
-	}
-	.card .corner.top {
-		top: 0;
-	}
-	.card .corner.bottom {
-		bottom: 0.2mm;
-	}
-	.card .corner.left {
-		left: 0;
-	}
-	.card .corner.right {
-		right: 0.3mm;
-	}
 }
 
 body {

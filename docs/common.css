@@ -130,7 +130,7 @@
 	position: absolute;
 	left: 0.5mm;
 	right: 0.5mm;
-	top: 54.7mm;
+	top: 54mm;
 	bottom: 3.75mm;
 	padding: 0.5mm 1.5mm;
 	border-radius: 2mm;
@@ -171,7 +171,7 @@
 	left: 9mm;
 	right: 9mm;
 	bottom: -0.1mm;
-	padding: 0.4mm 1mm;
+	padding: 0.7mm 1mm;
 	border-top-left-radius: 1mm;
 	border-top-right-radius: 1mm;
 	background-color: var(--back-color);
@@ -184,7 +184,7 @@
 
 .card div.separator {
 	position: absolute;
-	top: 51.5mm;
+	top: 50.8mm;
 	height: 6mm;
 	left: 2mm;
 	right: 2mm;
@@ -204,7 +204,6 @@
 .card.tag-item .container {
 	background-image: url("media/background-item.jpg");
 }
-
 .card.tag-spell .container {
 	background-image: url("media/background-spell.jpg");
 }
@@ -212,7 +211,6 @@
 .card.tag-item div.name::before, .card.tag-item div.name::after {
 	background-image: url("media/gem-item.png");
 }
-
 .card.tag-spell div.name::before, .card.tag-spell div.name::after {
 	background-image: url("media/gem-spell.png");
 }
@@ -222,7 +220,23 @@
 }
 
 .card .corner {
-	display: none;
+	position: absolute;
+	display: block;
+	width: 0.5mm;
+	height: 0.5mm;
+	background-color: gray;
+}
+.card .corner.top {
+	top: 0;
+}
+.card .corner.bottom {
+	bottom: 0mm;
+}
+.card .corner.left {
+	left: 0;
+}
+.card .corner.right {
+	right: 0mm;
 }
 
 .card div.cardscount {
@@ -236,6 +250,10 @@
 }
 
 @media screen {
+	.card {
+		border-radius: 2mm;
+	}
+
 	.card.showcardscount div.cardscount {
 		display: block;
 	}

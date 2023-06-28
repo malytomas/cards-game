@@ -17,10 +17,6 @@ table img {
 	height: 20mm;
 }
 
-.card {
-	border-radius: 2mm;
-}
-
 .examplecard_container {
 	position: relative;
 }
